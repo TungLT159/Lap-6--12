@@ -30,7 +30,7 @@ import { Link } from 'react-router-dom'
                 <h4>Comments</h4>
                     {comments.map(comment=>{
                     return (
-                        <div>
+                        <div key={comment.id}>
                             <p>{comment.comment}</p>
                             <p>{comment.author}, {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))}</p>
                         </div>
