@@ -21,7 +21,8 @@ class CommentForm extends Component {
     }
 
     handleSubmit(values) {
-        alert('Current State is: ' + JSON.stringify(values));
+        this.toggleModal()
+        this.props.addComment(this.props.dishId, values.rating, values.author, values.comment)
     }
 
     render() {
@@ -46,15 +47,15 @@ class CommentForm extends Component {
 
                             </Row>
                             <Row className="form-group">
-                                <Label htmlFor="name">Your Name</Label>
-                                <Control.text model=".name" name="name" placeholder="Your Name" id="name" className="form-control"
+                                <Label htmlFor="author">Your Name</Label>
+                                <Control.text model=".author" name="author" placeholder="Your Name" id="author" className="form-control"
                                     validators={{
                                         minLength: minLength(3), maxLength: maxLength(15)
                                     }}
                                  />
                                  <Errors 
                                     className="text-danger"
-                                    model=".name"
+                                    model=".author"
                                     show="touched"
                                     messages={{
                                         minLength: 'Must be greater than 3 characters',
