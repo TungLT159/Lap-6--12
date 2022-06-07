@@ -108,7 +108,7 @@ class Contact extends Component {
                                         show="touched"
                                         messages={{
                                             required: 'Required',
-                                            minLength: 'Must be greater than 2 characters',
+                                            minLength: 'Must be greater than 3 characters',
                                             maxLength: 'Must be 15 characters or less'
                                         }}
                                      />
@@ -130,7 +130,7 @@ class Contact extends Component {
                                         show="touched"
                                         messages={{
                                             required: 'Required',
-                                            minLength: 'Must be greater than 2 numbers',
+                                            minLength: 'Must be greater than 3 numbers',
                                             maxLength: 'Must be 15 numbers or less',
                                             isNumber: 'Must be a number'
                                         }}
